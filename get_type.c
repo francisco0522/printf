@@ -1,27 +1,29 @@
+#include "holberton.h"
 /**
- * get_op_func - operation function
+ * type - operation function
  * @s: operator
  * Return: pointer.
  */
-int (*get_op_func(char *s))(int, int)
+void (*type(const char *s))(va_list ty)
 {
 	type_t types[] = {
 		{"c", print_char},
 		{"s", print_string},
-		{"i", print_int},
-		{"d", print_decimal},
+//		{"i", print_int},
+//		{"d", print_decimal},
 		{NULL, NULL}
 	};
 	int i;
 
 	i = 0;
-	while (types[i].ty != NULL)
+	while (types[i].ty)
 	{
-		if (strcmp(s, types[i].ty) == 0)
+		if (*s == *(types[i].ty))
 		{
-			break;
+			return types[i].f;
 		}
 		i++;
 	}
-	return (types[i].f);
+	write(2, "Not found", 9);
+	exit(1);
 }
