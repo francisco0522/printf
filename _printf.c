@@ -20,6 +20,7 @@ int _printf(const char *format, ...)
 		if (*(format + i) == '%')
 		{
 			type(format + i + 1)(ap);
+			i++;
 		}
 		else
 		{

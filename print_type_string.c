@@ -16,5 +16,6 @@ void print_string(va_list ty)
 	while(*(cad + i))
 	{
 	_putchar(*(cad + i));
+	i++;
 	}
 }
