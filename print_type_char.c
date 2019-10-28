@@ -4,7 +4,7 @@
   *
   *
   */
-void print_char(va_ list ch)
+void print_char(va_list ch)
 {
 	char c = va_arg(ch char)
 	if(c == NULL) 
