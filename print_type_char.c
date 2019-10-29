@@ -6,7 +6,7 @@
  */
 int print_char(va_list ch)
 {
-	char c = va_arg(ch, int);
+	unsigned char c = va_arg(ch, int);
 
 	write(1, &c, 1);
 	return (1);
