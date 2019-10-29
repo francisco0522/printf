@@ -23,7 +23,11 @@ int _printf(const char *format, ...)
 	{
 		if (*(format + i) == '%')
 		{
-			if (*(format + i + 1) == '%')
+			if (*(format + i + 1) != 'c' || *(format + i + 1) != 'd')
+			write(1, (format + i), 1);
+			else if (*(format + i + 1) == '\0')
+			return (-1);
+			else if (*(format + i + 1) == '%')
 			{
 			write(1, (format + i), 1);
 			i++;

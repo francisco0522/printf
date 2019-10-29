@@ -20,6 +20,5 @@ int (*type(const char *s))(va_list ty)
 			return (types[i].f);
 		i++;
 	}
-	write(2, "Not found", 9);
-	exit(-1);
+	return (0);
 }
