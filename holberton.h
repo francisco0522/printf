@@ -20,4 +20,5 @@ typedef struct ty
 } type_t;
 int print_char(va_list ty);
 int print_string(va_list ty);
+int print_int(va_list ty);
 #endif /* HOLBERTON_H */
