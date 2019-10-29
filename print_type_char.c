@@ -9,7 +9,7 @@ int print_char(va_list ch)
 	char c = va_arg(ch, int);
 
 	if (c == '\0')
-		exit(1);
+		exit(2);
 	write(1, &c, 1);
 	return (1);
 }
