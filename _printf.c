@@ -48,5 +48,5 @@ int _printf(const char *format, ...)
 		i++;
 	}
 	va_end(ap);
-	return (contador - 1);
+	return (contador);
 }
