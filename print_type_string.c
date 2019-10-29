@@ -4,7 +4,7 @@
  * @ty: va_list
  * Return: Always 0.
  */
-void print_string(va_list ty)
+int print_string(va_list ty)
 {
 	int i = 0;
 
@@ -12,11 +12,13 @@ void print_string(va_list ty)
 
 	if (cad == NULL)
 	{
-		return;
+		write(1, "(null)", 6);
+		return (6);
 	}
 	while (*(cad + i))
 	{
 		write(1, (cad + i), 1);
 		i++;
 	}
+	return (i);
 }

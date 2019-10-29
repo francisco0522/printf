@@ -15,12 +15,24 @@ int _printf(const char *format, ...)
 	int i = 0;
 
 	va_start(ap, format);
+	if (format == NULL)
+	{
+	return (-1);
+	}
 	while (*(format + i))
 	{
 		if (*(format + i) == '%')
 		{
+			if (*(format + i + 1) == '%')
+			{
+			write(1, (format + i), 1);
+			i++;
+			}
+			else
+			{
 			type(format + i + 1)(ap);
 			i++;
+			}
 		}
 		else
 		{

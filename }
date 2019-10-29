@@ -4,11 +4,13 @@
  * @s: operator
  * Return: pointer.
  */
-int (*type(const char *s))(va_list ty)
+void (*type(const char *s))(va_list op)
 {
 	type_t types[] = {
 		{"c", print_char},
 		{"s", print_string},
+//		{"i", print_int},
+//		{"d", print_decimal},
 		{NULL, NULL}
 	};
 	int i;
@@ -17,9 +19,11 @@ int (*type(const char *s))(va_list ty)
 	while (types[i].ty)
 	{
 		if (*s == *(types[i].ty))
-			return (types[i].f);
+		{
+			return types[i].f;
+		}
 		i++;
 	}
 	write(2, "Not found", 9);
-	exit(-1);
+	exit(1);
 }

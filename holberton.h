@@ -6,7 +6,7 @@
 #include <stdlib.h>
 int _putchar(char c);
 int _printf(const char *format, ...);
-void (*type(const char *s))(va_list ty);
+int (*type(const char *s))(va_list ty);
 /**
  * struct ty - Struct
  *
@@ -16,9 +16,8 @@ void (*type(const char *s))(va_list ty);
 typedef struct ty
 {
 	char *ty;
-	void (*f)(va_list);
+	int (*f)(va_list);
 } type_t;
-void print_char(va_list ty);
-void print_string(va_list ty);
-void print_int(va_list ty);
+int print_char(va_list ty);
+int print_string(va_list ty);
 #endif /* HOLBERTON_H */

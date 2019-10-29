@@ -9,7 +9,7 @@
  */
 int main(void)
 {
-	_printf(NULL);
+	_printf("%yd", 'a');
 //    int len;
 //    int len2;
 //    unsigned int ui;
