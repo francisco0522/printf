@@ -9,7 +9,7 @@ void (*type(const char *s))(va_list ty)
 	type_t types[] = {
 		{"c", print_char},
 		{"s", print_string},
-		{"i", print_int},
+//		{"i", print_int},
 //		{"d", print_decimal},
 		{NULL, NULL}
 	};

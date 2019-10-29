@@ -9,10 +9,7 @@
  */
 int main(void)
 {
-	int i = 5;
-
-	_printf("el valor es %i", i);
-
+	_printf(NULL);
 //    int len;
 //    int len2;
 //    unsigned int ui;

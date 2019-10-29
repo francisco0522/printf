@@ -10,5 +10,5 @@ void print_char(va_list ch)
 
 	if (c == '\0')
 		exit(1);
-	write(1, c, 1);
+	write(1, &c, 1);
 }

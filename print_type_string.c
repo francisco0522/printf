@@ -16,7 +16,7 @@ void print_string(va_list ty)
 	}
 	while (*(cad + i))
 	{
-		write(1, *(cad + i), 1);
+		write(1, (cad + i), 1);
 		i++;
 	}
 }
