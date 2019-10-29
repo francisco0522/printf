@@ -8,15 +8,15 @@ int _putchar(char c);
 int _printf(const char *format, ...);
 void (*type(const char *s))(va_list ty);
 /**
- * struct cad - Struct
+ * struct ty - Struct
  *
- * @cade: char
+ * @ty: char
  * @f: func
  */
 typedef struct ty
 {
-        char *ty;
-        void (*f)(va_list);
+	char *ty;
+	void (*f)(va_list);
 } type_t;
 void print_char(va_list ty);
 void print_string(va_list ty);

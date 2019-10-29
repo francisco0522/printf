@@ -5,7 +5,7 @@
 #include <string.h>
 /**
  * _printf - produces output according to a format.
- * @form: va_list
+ * @format: va_list
  * Return: Always 0.
  */
 int _printf(const char *format, ...)
@@ -14,8 +14,8 @@ int _printf(const char *format, ...)
 	va_list ap;
 	int i = 0;
 
-	va_start (ap, format);
-	while(*(format + i))
+	va_start(ap, format);
+	while (*(format + i))
 	{
 		if (*(format + i) == '%')
 		{
@@ -24,7 +24,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			_putchar(*(format + i));
+			write(1,*(format + i), 1);
 		}
 		i++;
 	}

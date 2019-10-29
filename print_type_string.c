@@ -9,13 +9,14 @@ void print_string(va_list ty)
 	int i = 0;
 
 	char *cad = (va_arg(ty, char*));
+
 	if (cad == NULL)
 	{
-	return;
+		return;
 	}
-	while(*(cad + i))
+	while (*(cad + i))
 	{
-	_putchar(*(cad + i));
-	i++;
+		write(1, *(cad + i), 1);
+		i++;
 	}
 }

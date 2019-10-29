@@ -1,10 +1,10 @@
 #include"holberton.h"
 /**
- *
- *
- *
+ * print_int - print int
+ * @in: va_list.
+ * Return: none
  */
 void print_int(va_list in)
 {
-	_putchar(va_arg(in, int));
+	write(1, va_arg(in, int), 1);
 }
