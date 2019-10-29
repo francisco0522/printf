@@ -21,34 +21,32 @@ int _printf(const char *format, ...)
 	{
 		if (*(format + i) == '%')
 		{
-			contador = contador + 1;
 			if (*(format + i + 1) == '\0')
 				return (-1);
 			else if (*(format + i + 1) == '%')
 			{
+				contador++;
 				write(1, (format + i), 1);
 				i++;
-				contador = contador + 1;
 			}
 			else if (*(format + i + 1) != 'c' && *(format + i + 1) != 's')
 			{
+				contador++;
 				write(1, (format + i), 1);
-				contador = contador + 1;
 			}
 			else
 			{
-				contador += 1;
-				type(format + i + 1)(ap);
+				contador += type(format + i + 1)(ap);
 				i++;
 			}
 		}
 		else
 		{
-			contador += 1;
+			contador++;
 			write(1, (format + i), 1);
 		}
 		i++;
 	}
 	va_end(ap);
-	return (contador);
+	return (contador - 1);
 }
