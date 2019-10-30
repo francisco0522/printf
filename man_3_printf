@@ -1,0 +1,103 @@
+
+.SH NAME
+.B _printf
+- formated print output and conversion
+.SH SYNOPSIS
+.Pp #include "holberton.h"
+
+
+.I int _printf(const char *format, ...)
+.Pp
+
+
+.I #include <stdarg.h>
+.Pp
+
+
+.I int (*type(const char *s))(va_list ty);
+ 
+
+.SH SYNTAX
+.Pp
+.I int y = 10;
+
+.
+
+.I Printf ( "%d\n", y);
+
+
+.SS DESCRIPTION
+.Pp 
+
+\fBPrintf\fp () prints a message on the screen using a \fBformat string\fb that includes the instructions to mix multiple strings in the final string to be shown on the screen, produce results according to the format \fB%\fp therefore, start with the symbol \fB%\fp And ends with its type. They write the output in the given output flow;
+
+.Pp
+
+\fBPrintf\fp () are called with a va_list instead of a variable number of arguments. invoke the va_arg macro, the value of ap is not defined after the call. See stdarg (3).
+
+
+under the control of a format string that specifies how subsequent arguments (or arguments accessed through the stubble variable-length argument facilities
+(3)) are converted for output.
+
+.SS Return value
+printf allows specific formatting of the output \fB -%\fp d or \fB%\fp \fbi%\fp \fBs%\fp c after a successful return, these functions return the number of characters printed (excluding the null byte used to finalize the output to the strings).If the output is truncated due to this limit, the return value is the number
+of characters that would have been written in the final string if there wasenough space available. Therefore, a return value of size or more means that the
+output was truncated.
+.Pp
+
+
+If an exit error is found, a negative value is returned.
+.SH Format string
+The format string is a string of characters, which begins and ends in its initial offset state, if it exists. The format string consists of zero or more 
+directives: ordinary characters \fB(not%)\fp, which are copied without changes in the output sequence; and conversion specifications. Each conversion specification is entered by the \fB%\fp character, and ends with a conversion specifier.The arguments must correspond correctly with the conversion specifier. 
+By default, the arguments are used in the order given, where the conversion specifier requests the following argument, the symbol \fB"\\n"\fp represents a line break.
+.Pp
+
+
+.SS The characters of the flag
+
+The formatters allow to be modified to define number of digits or characters,entering the parameters of number of digits and significant digits as the following:
+
+.I \fB-" "\fp
+
+(a space) A blank space must be left before a positive number (or empty string)produced by a signed conversion.
+
+
+
+Length modifier
+
+Here, \fB"integer conversion"\fp means d, i conversion.
+
+The next integer conversion corresponds to a signed char or unsigned char argument, or that the next n conversion corresponds to a pointer to a signed char argument.
+
+The conversion specifier
+
+A character that specifies the type of conversion to be applied. Conversion specifiers and their meanings are:
+
+.I \fB-d, i. \fp
+
+Signed decimal conversion of an integer. Accuracy, if any, provides the minimum number of digits that should appear; If the converted value requires fewer digits,
+it is filled to the left with zeros. The default precision is 1. When 0 is printed with an explicit precision 0, the output is empty.
+
+.I \fB-c\fp
+
+The int argument becomes an unsigned character and the resulting character is written and prints the corresponding ASCII character
+
+.I \fB-s\fp
+
+Character string \fB(ending in '\ 0')\fp. The characters in the array are written (but do not include) the null termination byte \fB('\\ 0')\fp; if a precision is 
+specified, it is not written more than the specified number. if the precision is not specified, or is greater than the size of the matrix, the matrix must contain a null termination byte.
+
+
+.I \fB-%\fp
+
+
+\fB"%%"\fp Print the \fB"%"\fp symbol
+
+
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+.I  \fB Juan David Davalos.\fp
+
+.I \fB Francisco Londoño. \fp
