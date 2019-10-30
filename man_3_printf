@@ -1,4 +1,4 @@
-.TH man 8 "06 May 2010" "1.0" "nuseradd man page"
+.TH man 1 "29 Oct 2019" "1.0" "Printf man page"
 .SH NAME
 .B _printf
 - formated print output and conversion
